@@ -10,6 +10,7 @@ This is not an official Google product.
 |-----------|-----------|--------|
 | Javanese  | jv | [Open SLR 35](http://openslr.org/35/) |
 | Sundanese | su | [Open SLR 36](http://openslr.org/36/) |
+| Sinhala   | si | [Open SLR 52](http://openslr.org/52/) |
 
 ## How to use
 

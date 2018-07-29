@@ -14,19 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-case "$1" in
-  jv) fragment="35/asr_javanese" ;;
-  su) fragment="36/asr_sundanese" ;;
-  si) fragment="52/asr_sinhala" ;;
-  bn) fragment="53/asr_bengali" ;;
-  ne) fragment="54/asr_nepali" ;;
-  *) echo "Unrecognized language: '$1'" >&2 ; exit 1 ;;
-esac
-
-for d in 0 1 2 3 4 5 6 7 8 9 a b c d e f; do
-  resource="${fragment}_${d}.zip"
-  wget "http://www.openslr.org/resources/$resource"
-  zipfile="$(basename "$resource")"
-  unzip -nqq "$zipfile"
-  rm -f "$zipfile"
-done
+set -o errexit
+../common/prep.sh '../asr_sinhala'
+../common/train.sh
